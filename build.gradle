@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'xyz.bq'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.postgresql:postgresql:42.2.9'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
